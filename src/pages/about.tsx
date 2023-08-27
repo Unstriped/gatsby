@@ -1,14 +1,12 @@
 import React from "react";
-import { HeadFC, PageProps } from "gatsby";
+import { Link, type HeadFC, type PageProps } from "gatsby";
+import Layout from "./components/layout";
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
-    <main>
-      <section className="p-4">
-        <h1 className="text-3xl">About me</h1>
-        <p className="text-md">Hello :)</p>
-      </section>
-    </main>
+    <Layout pageTitle="About">
+      <p className="text-md">Hello :)</p>
+    </Layout>
   );
 };
 
