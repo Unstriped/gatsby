@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, type HeadFC, type PageProps } from "gatsby";
-import Layout from "./components/layout";
+import { type HeadFC, type PageProps } from "gatsby";
+import Layout from "../components/layout";
+import BaseSeo from "../components/baseSeo";
 
 const AboutPage: React.FC<PageProps> = () => {
   return (
@@ -10,11 +11,6 @@ const AboutPage: React.FC<PageProps> = () => {
   );
 };
 
-export const Head: HeadFC = () => (
-  <>
-    <title>About Me</title>
-    <meta name="description" content="There is no content really" />
-  </>
-);
+export const Head: HeadFC = () => <BaseSeo title="About" />;
 
 export default AboutPage;
