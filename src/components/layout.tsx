@@ -28,11 +28,11 @@ const Layout: React.FC<Props> = ({ pageTitle, children }) => {
 
   return (
     <div className="p-4">
-      <header className="text-5xl mb-8 text-slate-600">
+      <header className="capitalize text-5xl mb-2 text-slate-600">
         {data.site.siteMetadata.title}
       </header>
       <nav>
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 mb-4">
           <li>
             <BaseLink label="home" to="/" />
           </li>
@@ -45,7 +45,7 @@ const Layout: React.FC<Props> = ({ pageTitle, children }) => {
         </ul>
       </nav>
       <main>
-        <h1 className="text-3xl mb-2">{pageTitle}</h1>
+        <h1 className="capitalize text-3xl mb-2">{pageTitle}</h1>
         {children}
       </main>
     </div>
