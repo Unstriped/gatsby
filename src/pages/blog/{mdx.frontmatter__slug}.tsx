@@ -20,10 +20,9 @@ const BlogPost: React.FC<PageProps<DataProps>> = ({
   data: DataProps;
   children: undefined;
 }) => {
-  let image: IGatsbyImageData | undefined;
   // Not sure how to fix this error, so using any for now
   const img: any = data?.mdx?.frontmatter?.hero_image;
-  image = getImage(img);
+  const image = getImage(img);
 
   return (
     <Layout pageTitle={data?.mdx?.frontmatter?.title || ""}>
